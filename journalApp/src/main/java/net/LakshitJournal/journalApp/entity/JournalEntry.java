@@ -1,4 +1,4 @@
-package net.engineeringdigest.journalApp.entity;
+package net.LakshitJournal.journalApp.entity;
 
 public class JournalEntry {
     private  long id;

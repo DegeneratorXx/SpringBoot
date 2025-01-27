@@ -1,7 +1,7 @@
-package net.engineeringdigest.journalApp.controller;
+package net.LakshitJournal.journalApp.controller;
 
 
-import net.engineeringdigest.journalApp.entity.JournalEntry;
+import net.LakshitJournal.journalApp.entity.JournalEntry;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import java.util.Map;
 @RequestMapping("/_journal")
 public class JournalEntryController {
 
-    private Map<Long,JournalEntry> journalEntries=new HashMap<>();
+    private Map<Long, JournalEntry> journalEntries=new HashMap<>();
     @GetMapping
     public List<JournalEntry> getAll(){
         return new ArrayList<>(journalEntries.values());

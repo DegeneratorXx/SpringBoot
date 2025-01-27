@@ -1,11 +1,8 @@
-package net.engineeringdigest.journalApp.controller;
+package net.LakshitJournal.journalApp.controller;
 
-import net.engineeringdigest.journalApp.entity.JournalEntry;
+import net.LakshitJournal.journalApp.entity.JournalEntry;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/journal")
