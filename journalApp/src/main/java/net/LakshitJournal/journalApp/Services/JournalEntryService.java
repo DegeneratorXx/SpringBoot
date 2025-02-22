@@ -30,7 +30,7 @@ private UserService userService;
             journalEntry.setDate(LocalDateTime.now());
             JournalEntry saved = repo.save(journalEntry);//saved journal entry in a variable
             user.getJournalEntries().add(saved);//pushing that variable in user db also so they get connected>
-            userService.saveEntry(user);
+            userService.saveUser(user);
         }
         catch (Exception e){
             log.error("Exception",e);
@@ -47,13 +47,27 @@ private UserService userService;
     public Optional<JournalEntry> findbyId(ObjectId id){
         return repo.findById(id);
     }
-    public void deletebyId(ObjectId id, String userName)
-    {
-        User user = userService.findByUserName(userName);
-        user.getJournalEntries().removeIf(x->x.getId().equals(id)); //remove that entry on which getId gives same id as
-        userService.saveEntry(user);
-        repo.deleteById(id);
 
+    @Transactional
+    public boolean deletebyId(ObjectId id, String userName)
+    {
+        boolean removed=false;
+        try {
+
+        User user = userService.findByUserName(userName);
+        removed=user.getJournalEntries().removeIf(x->x.getId().equals(id)); //remove that entry on which getId gives same id as
+        if (removed){
+        userService.saveUser(user);
+        repo.deleteById(id);
+        }
+        }
+        catch (Exception e){
+            System.out.println(e);
+            throw  new RuntimeException("An error occured while deleting the entry.",e);
+        }
+
+        return removed;
 
     }
+
 }

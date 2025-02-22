@@ -41,7 +41,7 @@ public class UserController {
 
         userInDb.setUserPassword(user.getUserPassword());//updated password
         userInDb.setUserName(user.getUserName());//updated username which we are providing in Querry (json)
-        userService.saveEntry(userInDb);
+        userService.saveNewUser(userInDb);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
