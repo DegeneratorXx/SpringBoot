@@ -23,15 +23,11 @@ public class UserController {
     @Autowired
     private UserRepo userRepo;
 
-    @GetMapping
-    public List<User> getAllUsers(){
-        return userService.getAll();
-    }
-
-//    @PostMapping
-//    public void createUser(@RequestBody User user){
-//    userService.saveEntry(user);
+//    @GetMapping
+//    public List<User> getAllUsers(){
+//        return userService.getAll();
 //    }
+
 
     @PutMapping
     public ResponseEntity<?> updateById(@RequestBody User user) {
