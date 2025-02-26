@@ -1,6 +1,4 @@
-Here is the code for your `README.md` file:
 
-```markdown
 # Spring Boot Repository
 
 This repository contains projects built using **Spring Boot**. Currently, it hosts a single project:
