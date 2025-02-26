@@ -12,7 +12,6 @@ The **Journal App** is a web-based application developed using **Spring Boot**. 
 - **Database Integration**: Persistent storage using **MySQL/PostgreSQL**.
 - **RESTful API**: Well-structured API endpoints for journal management.
 - **Spring Security**: Ensures user data protection.
-- **Frontend Integration**: API-ready for React/Angular frontend.
 - **Deployment Ready**: Configured for cloud deployment.
 
 ### 🛠️ Technologies Used:
@@ -43,6 +42,3 @@ The **Journal App** is a web-based application developed using **Spring Boot**. 
 - Implementing **search functionality**.
 - Enhancing **UI/UX** with frontend frameworks.
 
----
-Feel free to contribute and improve the **Journal App**! 🎯
-```
