@@ -1,3 +1,6 @@
+Here is the code for your `README.md` file:
+
+```markdown
 # Spring Boot Repository
 
 This repository contains projects built using **Spring Boot**. Currently, it hosts a single project:
@@ -26,3 +29,22 @@ The **Journal App** is a web-based application developed using **Spring Boot**. 
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/spring-boot.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd spring-boot/journal-app
+   ```
+3. Configure database settings in `application.properties`.
+4. Run the application:
+   ```bash
+   mvn spring-boot:run
+   ```
+
+### 📌 Future Enhancements:
+- Adding **rich text editing** for journal entries.
+- Implementing **search functionality**.
+- Enhancing **UI/UX** with frontend frameworks.
+
+---
+Feel free to contribute and improve the **Journal App**! 🎯
+```
