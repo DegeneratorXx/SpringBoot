@@ -18,7 +18,7 @@ The **Journal App** is a web-based application developed using **Spring Boot**. 
 - **Spring Boot** (Core framework)
 - **Spring Security** (Authentication & Authorization)
 - **Spring Data JPA** (Database access)
-- **MySQL/PostgreSQL** (Database)
+- **MongoDB** (Database)
 - **Thymeleaf/REST API** (Frontend rendering & integration)
 - **Maven** (Dependency management)
 
