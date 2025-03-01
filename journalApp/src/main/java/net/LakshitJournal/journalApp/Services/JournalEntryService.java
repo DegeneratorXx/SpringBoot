@@ -62,7 +62,7 @@ private UserService userService;
         }
         }
         catch (Exception e){
-            System.out.println(e);
+            log.error("Error",e);
             throw  new RuntimeException("An error occured while deleting the entry.",e);
         }
 

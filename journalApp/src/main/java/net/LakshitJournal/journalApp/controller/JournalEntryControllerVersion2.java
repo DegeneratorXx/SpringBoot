@@ -94,7 +94,7 @@ public class JournalEntryControllerVersion2 {
         List<JournalEntry> collect = user.getJournalEntries().stream().filter(x -> x.getId().equals(myId)).collect(Collectors.toList());
         if (!collect.isEmpty()){
            Optional<JournalEntry> entry=journalEntryService.findbyId(myId);
-            if(entry!=null) {
+            if(entry.isPresent()) {
                 JournalEntry oldentry = entry.get();
                 oldentry.setTitle(myEntry.getTitle() != null && !myEntry.getTitle().equals("") ? myEntry.getTitle() : oldentry.getTitle());
                 oldentry.setContent(myEntry.getContent() != null && !myEntry.getContent().equals("") ? myEntry.getContent() : oldentry.getContent());

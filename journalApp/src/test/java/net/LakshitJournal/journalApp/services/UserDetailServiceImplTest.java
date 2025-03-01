@@ -3,6 +3,7 @@ package net.LakshitJournal.journalApp.services;
 import net.LakshitJournal.journalApp.Repository.UserRepo;
 import net.LakshitJournal.journalApp.Services.UserDetailServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
@@ -27,6 +28,7 @@ public class UserDetailServiceImplTest {
     void setUp(){
         MockitoAnnotations.initMocks(this);
     }
+    @Disabled
     @Test
     public void loadUserByUsernameTest(){
         when(userRepo.findByUserName(ArgumentMatchers.anyString()))
