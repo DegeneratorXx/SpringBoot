@@ -1,7 +1,9 @@
 package net.LakshitJournal.journalApp.controller;
 
 import net.LakshitJournal.journalApp.Repository.UserRepo;
+import net.LakshitJournal.journalApp.ResponseAPI.WeatherResponse;
 import net.LakshitJournal.journalApp.Services.UserService;
+import net.LakshitJournal.journalApp.Services.WeatherService;
 import net.LakshitJournal.journalApp.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,9 @@ public class UserController {
 
     @Autowired
     private UserRepo userRepo;
+
+    @Autowired
+    private WeatherService weatherService;
 
 //    @GetMapping
 //    public List<User> getAllUsers(){
@@ -48,6 +53,22 @@ public class UserController {
         userRepo.deleteByUserName(userName);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @GetMapping
+    public ResponseEntity<?> greeting() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        WeatherResponse res = weatherService.getWeather("Nagpur");
+        String greet="";
+        if(res!=null)
+        {
+            greet = "\nWeather Feels Like: " + res.getCurrent().getFeelslike() +
+                    "\nCurrent Temperature is: " + res.getCurrent().getTemperature() +
+                    "\nWeather Description is: " + res.getCurrent().getWeatherDescriptions();
+            System.out.println(greet);
+        }
+        return new ResponseEntity<>("Hi "+ authentication.getName()+greet, HttpStatus.OK);
+    }
+
 
 
 

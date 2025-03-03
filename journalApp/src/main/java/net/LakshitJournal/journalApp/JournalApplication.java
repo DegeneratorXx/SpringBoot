@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.MongoTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication //applied to only main class
 @EnableTransactionManagement // used to find where transactional annotation is used
@@ -26,6 +27,10 @@ public class JournalApplication {
         return new MongoTransactionManager(dbFactory);
     }
 
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 
 
 }
