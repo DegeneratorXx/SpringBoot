@@ -14,7 +14,6 @@ public class WeatherService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public static final String apikey="8397173904d5444fd8dc7ca9c2a1b5e4";
 
     private static final String API = "http://api.weatherstack.com/current?access_key=API_KEY&query=CITY" ;
 
