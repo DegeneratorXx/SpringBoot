@@ -7,6 +7,7 @@ import net.LakshitJournal.journalApp.entity.User;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Slf4j
-@Component
+@Service  // service and components both are same , but @service is used to showcase that there is buisness logic in this class
 public class JournalEntryService {
 
 @Autowired
