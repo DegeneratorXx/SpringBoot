@@ -1,6 +1,7 @@
 package net.LakshitJournal.journalApp.controller;
 
 import net.LakshitJournal.journalApp.Services.UserService;
+import net.LakshitJournal.journalApp.cache.AppCache;
 import net.LakshitJournal.journalApp.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,10 @@ public class AdminController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private AppCache appCache;
+
+
     @GetMapping("/all-users")
     public ResponseEntity<?> getALLUsers(){
         List<User> all=userService.getAll();
@@ -29,5 +34,11 @@ public class AdminController {
     public ResponseEntity<String> createAdmin(@RequestBody User user) {
         userService.saveAdmin(user);
         return new ResponseEntity<>("Admin user created successfully", HttpStatus.CREATED);
+    }
+
+
+    @GetMapping("/clear-app-cache")
+    public void clearAppCache(){
+        appCache.init();
     }
 }
