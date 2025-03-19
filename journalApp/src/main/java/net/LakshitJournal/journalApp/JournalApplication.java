@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.MongoTransactionManager;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.client.RestTemplate;
@@ -15,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableTransactionManagement // used to find where transactional annotation is used
 //PlatformTransactionManager is interface
 // MongoTransactionManager implements the PlatformTransactionManager
-
+@EnableScheduling //enable crons throughout the application
 public class JournalApplication {
 
     public static void main(String[] args) {
