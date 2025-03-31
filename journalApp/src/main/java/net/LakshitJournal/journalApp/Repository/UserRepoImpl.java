@@ -23,9 +23,7 @@ public class UserRepoImpl {
 //        query.addCriteria(Criteria.where("email").ne(null).ne(""));
         query.addCriteria(Criteria.where("email").regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"));
         query.addCriteria(Criteria.where("sentimentAnalysis").exists(true));
+        return mongoTemplate.find(query, User.class);
 
-
-        List<User> users = mongoTemplate.find(query, User.class);
-        return users;
     }
 }

@@ -35,6 +35,7 @@ private UserService userService;
         }
         catch (Exception e){
             log.error("Exception",e);
+
             throw new RuntimeException("An error occured while saving the entry",e);
         }
     }
