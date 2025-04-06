@@ -31,7 +31,7 @@ public class UserScheduler {
     private AppCache appCache;
 
 
-//    @Scheduled(cron = "0 0 9 * * SUN")
+    //    @Scheduled(cron = "0 0 9 * * SUN")
     public void fetchUserAndSendEmail(){
         List<User> users = userRepository.getUserForSA();
         for (User user : users) {
@@ -53,9 +53,9 @@ public class UserScheduler {
             if (mostFrequentSentiment != null) {
                 emailService.sendEmail(user.getEmail(),"Sentiment for last 7 days ",mostFrequentSentiment.toString());
             }
-            }
+        }
 
-            }
+    }
 
     //reloading appcache every5 min for detecting cahnges in config_app collection in db
     @Scheduled(cron = "0 0/10 * ? * *")
