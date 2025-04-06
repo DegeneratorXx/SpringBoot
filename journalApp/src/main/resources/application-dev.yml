@@ -2,17 +2,17 @@ spring:
   redis:
     host: redis-14570.c305.ap-south-1-1.ec2.redns.redis-cloud.com
     port: 14570
-    password: AzLKdBkNl5WTiD8BWhJBei2zDMB8sjsm
+    password: xxxxxxxxxxx
   data:
     mongodb:
-      uri: mongodb+srv://lakshitkhandelwal2002:yuGhsKpnw9j1lxfG@cluster0.ngbwu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      uri: mongodb+srv://xxxxxxxxxxxxxxxxxx:xxxxxxxxxxxxxxxxxxx.ngbwu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       database: journaldb
       auto-index-creation: true
   mail:
     host: smtp.gmail.com
     port: 587
-    username: lakshitkhandelwal2002@gmail.com
-    password: qzzq hska igze gikm
+    username: xxxxxxxxxxxxxxxx
+    password: xxxxxxxxxxxxxxx
     properties:
       mail:
         smtp:
@@ -22,7 +22,7 @@ spring:
 
 weather:
   api:
-    key: 8397173904d5444fd8dc7ca9c2a1b5e4
+    key: xxxxxxxxxxxxxxxxxxxxx
 
 
 #
@@ -50,7 +50,7 @@ weather:
 #      sasl:
 #        mechanism: PLAIN
 #        jaas:
-#          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='UD2TJAOWTHUQDIOF' password='vA9I21ZRXddiO2V9hVagmtVBeHSwHmxfnKbl3YIfG2c6p0OqUYHPMOsXSdXf8o4Y';
+#          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='xxxxxxxxxxxxx' password='xxxxxxxxxxxxxxxx;
 #
 #    session:
 #      timeout:
