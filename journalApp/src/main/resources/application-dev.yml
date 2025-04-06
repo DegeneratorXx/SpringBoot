@@ -1,13 +1,64 @@
 spring:
+  redis:
+    host: redis-14570.c305.ap-south-1-1.ec2.redns.redis-cloud.com
+    port: 14570
+    password: AzLKdBkNl5WTiD8BWhJBei2zDMB8sjsm
   data:
     mongodb:
       uri: mongodb+srv://lakshitkhandelwal2002:yuGhsKpnw9j1lxfG@cluster0.ngbwu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       database: journaldb
       auto-index-creation: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: lakshitkhandelwal2002@gmail.com
+    password: qzzq hska igze gikm
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
-server:
-  port: 8080
+weather:
+  api:
+    key: 8397173904d5444fd8dc7ca9c2a1b5e4
 
-logging:
-  level:
-    root: ERROR
+
+#
+#  kafka:
+#    bootstrap-servers: pkc-9q8rv.ap-south-2.aws.confluent.cloud:9092
+#
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#
+#    consumer:
+#      group-id: week1v-sentiment-group
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#
+#      properties:
+#        spring:
+#          json:
+#            trusted:
+#              packages: net.engineeringdigest.journalApp.model
+#
+#    properties:
+#      security:
+#        protocol: SASL_SSL
+#      sasl:
+#        mechanism: PLAIN
+#        jaas:
+#          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='UD2TJAOWTHUQDIOF' password='vA9I21ZRXddiO2V9hVagmtVBeHSwHmxfnKbl3YIfG2c6p0OqUYHPMOsXSdXf8o4Y';
+#
+#    session:
+#      timeout:
+#        ms: 45000
+#
+#
+#
+
+#logging:
+#  level:
+#    root: ERROR
